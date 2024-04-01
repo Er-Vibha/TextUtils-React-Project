@@ -12,6 +12,9 @@ function App() {
       message: message,
       type: type,
     });
+    setTimeout(() => {
+      setalert(null)
+    }, 2000);
   };
   const toggleMode = () => {
     if (mode === "light") {
@@ -29,7 +32,7 @@ function App() {
       <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} ShowAlert={ShowAlert} />
       <div className="container">
-        <Textis heading="Enter Text" mode={mode} />
+        <Textis ShowAlert={ShowAlert}  heading="Enter Text" mode={mode} />
       </div>
     </>
   );
